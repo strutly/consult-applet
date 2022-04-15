@@ -1,0 +1,33 @@
+<tips msg="{{msg}}" show="{{show}}" type="{{type}}"></tips>
+<form bindsubmit="search">
+  <view class="cu-bar bg-white search fixed">
+    <input hidden name="pageNum" value="1"></input>
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" name="name" placeholder="输入搜索的关键词"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-gradual-green shadow-blur round" formType="submit">搜索</button>
+    </view>
+  </view>
+</form>
+<view class="cu-list menu margin-top safe-bottom">
+  <navigator url="/pages/expert/detail?id={{item.id}}" class="cu-item" wx:for="{{experts}}" wx:key="index">
+    <view class="content padding-tb-sm">
+      <view>
+        <text class="cuIcon-profile text-blue margin-right-xs"></text> {{item.name}}
+      </view>
+      <view class="text-sm">
+        <text class="iconfont icon-post margin-right-xs"></text>职务:{{item.post?item.post:'-'}}
+        
+      </view>
+      <view class="text-sm">
+        <text class="iconfont icon-area margin-right-xs"></text>研究领域:{{item.area?item.area:'-'}}
+      </view>
+      <view class="text-sm">
+        <text class="iconfont icon-direction margin-right-xs"></text>研究方向:{{item.direction?item.direction:'-'}}
+      </view>
+    </view>
+  </navigator>
+</view>
+<tabBar id="tabBar" auth="{{auth}}"></tabBar>

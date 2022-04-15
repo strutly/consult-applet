@@ -1,0 +1,37 @@
+<view class="cu-list menu margin-top safe-bottom margin-bottom">
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 专家详情
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content padding-tb-sm">      
+      <view wx:if="{{info.name}}"><text class="cuIcon-profile text-blue margin-right-xs"></text>姓名:{{info.name}}</view>
+      <view wx:if="{{info.groupName}}"><text class="iconfont icon-groupName text-blue margin-right-xs"></text>类别:{{info.groupName}}</view>
+      <view wx:if="{{info.englishName}}"><text class="iconfont icon-englishName text-blue margin-right-xs"></text>英文名:{{info.englishName}}</view>
+      <view wx:if="{{info.specialty}}"><text class="iconfont icon-specialty text-blue margin-right-xs"></text>所属专业委员会（首选）:{{info.specialty}}</view>
+      <view wx:if="{{info.phone}}"><text class="iconfont icon-phone text-blue margin-right-xs"></text>联系电话:{{info.phone}}</view>
+      <view wx:if="{{info.sex}}"><text class="iconfont icon-sex text-blue margin-right-xs"></text>性别:{{info.sex}}</view>
+      <view wx:if="{{info.nationality}}"><text class="iconfont icon-nationality text-blue margin-right-xs"></text>国籍:{{info.nationality}}</view>
+      <view wx:if="{{info.birthday}}"><text class="iconfont icon-birthday text-blue margin-right-xs"></text>出生日期:{{info.birthday}}</view>
+      <view wx:if="{{info.workUnit}}"><text class="iconfont icon-workUnit text-blue margin-right-xs"></text>现工作单位:{{info.workUnit}}</view>
+      <view wx:if="{{info.wordAddress}}"><text class="iconfont icon-wordAddress text-blue margin-right-xs"></text>详细地址:{{info.wordAddress}}</view>
+      <view wx:if="{{info.post}}"><text class="iconfont icon-post text-blue margin-right-xs"></text>职务:{{info.post}}</view>
+      <view wx:if="{{info.email}}"><text class="iconfont icon-email text-blue margin-right-xs"></text>常用电邮:{{info.email}}</view>
+      <view wx:if="{{info.email2}}"><text class="iconfont icon-email2 text-blue margin-right-xs"></text>备用邮箱:{{info.email2}}</view>
+      <view wx:if="{{info.contactName}}"><text class="iconfont icon-contactName text-blue margin-right-xs"></text>联系人姓名:{{info.contactName}}</view>
+      <view wx:if="{{info.contactPhone}}"><text class="iconfont icon-contactPhone text-blue margin-right-xs"></text>联系人手机:{{info.contactPhone}}</view>
+      <view wx:if="{{info.contactMail}}"><text class="iconfont icon-contactMail text-blue margin-right-xs"></text>联系人邮箱:{{info.contactMail}}</view>
+      <view wx:if="{{info.area}}"><text class="iconfont icon-area text-blue margin-right-xs"></text>专业领域:{{info.area}}</view>
+      <view wx:if="{{info.areaKey}}"><text class="iconfont icon-areaKey text-blue margin-right-xs"></text>领域关键词:{{info.areaKey}}</view>
+      <view wx:if="{{info.direction}}"><text class="iconfont icon-direction text-blue margin-right-xs"></text>专业方向:{{info.direction}}</view>
+      <view wx:if="{{info.honor}}"><text class="iconfont icon-honor text-blue margin-right-xs"></text>荣誉或奖项:{{info.honor}}</view>
+      <view wx:if="{{info.landingProvince}}"><text class="iconfont icon-landingProvince text-blue margin-right-xs"></text>落地省份:{{info.landingProvince}}</view>
+      <view wx:if="{{info.landingCity}}"><text class="iconfont icon-landingCity text-blue margin-right-xs"></text>落地城市:{{info.landingCity}}</view>
+      <view wx:if="{{info.batch}}"><text class="iconfont icon-batch text-blue margin-right-xs"></text>批次:{{info.batch}}</view>
+      <view wx:if="{{info.background}}"><text class="iconfont icon-background text-blue margin-right-xs"></text>学术背景:{{info.background}}</view>
+      <view wx:if="{{info.achievement}}"><text class="iconfont icon-achievement text-blue margin-right-xs"></text>专家成果:{{info.achievement}}</view>
+      <view wx:if="{{info.resource}}"><text class="iconfont icon-resource text-blue margin-right-xs"></text>资源及合作需求:{{info.resource}}</view>      
+    </view>
+  </view>
+</view>

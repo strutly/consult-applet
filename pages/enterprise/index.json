@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tips":"/compinents/tips/index",
+    "tabBar":"/compinents/tab-bar/index"
+  },
+  "navigationBarTitleText":"企业列表"
+}

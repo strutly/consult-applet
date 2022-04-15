@@ -1,0 +1,8 @@
+<view wx:if="{{auth}}">
+  <view class="tab" wx:if="{{first}}" bindtap="switch" data-url="/pages/enterprise/index">
+    <image src="/images/enterprise.png"></image>
+  </view>
+  <view class="tab" wx:else bindtap="switch" data-url="/pages/expert/index">
+    <image src="/images/expert.png"></image>
+  </view>
+</view>

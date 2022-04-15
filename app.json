@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/expert/index",
+    "pages/enterprise/index",
+    "pages/expert/detail",
+    "pages/enterprise/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/expert/index"
+      },
+      {
+        "pagePath": "pages/enterprise/index"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

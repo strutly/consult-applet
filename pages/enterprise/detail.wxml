@@ -1,0 +1,192 @@
+<view class="cu-list menu margin-top safe-bottom margin-bottom">
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 基础信息
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content padding-tb-sm">
+      <view class="flex" wx:if="{{enterprise.title}}"><text class="com com-title text-blue margin-right-xs"></text>
+        <view>企业名称:</view>
+        <view class="flex-sub">{{enterprise.title}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.demand}}"><text class="com com-demand text-blue margin-right-xs"></text>
+        <view>企业需求:</view>
+        <view class="flex-sub">{{demandArr[enterprise.demand]}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.classify}}"><text class="com com-classify text-blue margin-right-xs"></text>
+        <view>行业分类:</view>
+        <view class="flex-sub">{{classifyArr[enterprise.classify]}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.regtime}}"><text class="com com-regtime text-blue margin-right-xs"></text>
+        <view>注册时间:</view>
+        <view class="flex-sub">{{enterprise.regtime}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.introduce}}"><text class="com com-introduce text-blue margin-right-xs"></text>
+        <view>企业介绍:</view>
+        <view class="flex-sub">{{enterprise.introduce}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.address}}"><text class="com com-address text-blue margin-right-xs"></text>
+        <view>企业地址:</view>
+        <view class="flex-sub">{{enterprise.address}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.contactName}}"><text class="com com-contactName text-blue margin-right-xs"></text>
+        <view>企业联系人:</view>
+        <view class="flex-sub">{{enterprise.contactName}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.contactPhone}}"><text class="com com-contactPhone text-blue margin-right-xs"></text>
+        <view>企业联系方式:</view>
+        <view class="flex-sub">{{enterprise.contactPhone}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.director}}"><text class="com com-director text-blue margin-right-xs"></text>
+        <view>项目负责人:</view>
+        <view class="flex-sub">{{enterprise.director}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 走访情况
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content padding-tb-sm">
+      <view class="flex" wx:if="{{enterprise.visitStatus}}"><text class="com com-visitStatus text-blue margin-right-xs"></text>
+        <view>走访阶段:</view>
+        <view class="flex-sub">{{enterprise.visitStatus}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.communicationTime}}"><text class="com com-communicationTime text-blue margin-right-xs"></text>
+        <view>沟通时间:</view>
+        <view class="flex-sub">{{enterprise.communicationTime}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.feedback}}"><text class="com com-feedback text-blue margin-right-xs"></text>
+        <view>反馈/方案:</view>
+        <view class="flex-sub">{{enterprise.feedback}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.result}}"><text class="com com-result text-blue margin-right-xs"></text>
+        <view>结果:</view>
+        <view class="flex-sub">{{enterprise.result}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 企业运营情况
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content padding-tb-sm">
+
+
+
+      <view class="flex" wx:if="{{enterprise.lastRevenue}}"><text class="com com-lastRevenue text-blue margin-right-xs"></text>
+        <view>上年度营收（万元）:</view>
+        <view class="flex-sub">{{enterprise.lastRevenue}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.lastInvestment}}"><text class="com com-lastInvestment text-blue margin-right-xs"></text>
+        <view>上年度研发投入（万元）:</view>
+        <view class="flex-sub">{{enterprise.lastInvestment}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.propertyNum}}"><text class="com com-propertyNum text-blue margin-right-xs"></text>
+        <view>知识产权数量:</view>
+        <view class="flex-sub">{{enterprise.propertyNum}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.staffNum}}"><text class="com com-staffNum text-blue margin-right-xs"></text>
+        <view>员工人数:</view>
+        <view class="flex-sub">{{enterprise.staffNum}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.abroadNum}}"><text class="com com-abroadNum text-blue margin-right-xs"></text>
+        <view>留学归国人员数:</view>
+        <view class="flex-sub">{{enterprise.abroadNum}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.doctorNum}}"><text class="com com-doctorNum text-blue margin-right-xs"></text>
+        <view>博士人数:</view>
+        <view class="flex-sub">{{enterprise.doctorNum}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.masterNum}}"><text class="com com-masterNum text-blue margin-right-xs"></text>
+        <view>硕士人数:</view>
+        <view class="flex-sub">{{enterprise.masterNum}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.artisanNum}}"><text class="com com-artisanNum text-blue margin-right-xs"></text>
+        <view>技术人员:</view>
+        <view class="flex-sub">{{enterprise.artisanNum}}</view>
+      </view>
+
+    </view>
+  </view>
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 人才引进需求
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content padding-tb-sm">
+
+      <view class="flex" wx:if="{{enterprise.talentLevels}}"><text class="com com-talentLevels text-blue margin-right-xs"></text>
+        <view>引进人才层次:</view>
+        <view class="flex-sub">{{enterprise.talentLevels}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.cooperationMode}}"><text class="com com-cooperationMode text-blue margin-right-xs"></text>
+        <view>意向合作模式:</view>
+        <view class="flex-sub">{{cooperationModeArr[enterprise.cooperationMode]}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.talentExplain}}"><text class="com com-explain text-blue margin-right-xs"></text>
+        <view>说明:</view>
+        <view class="flex-sub">{{enterprise.talentExplain}}</view>
+      </view>
+
+    </view>
+  </view>
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 技术引进需求
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content padding-tb-sm">
+
+      <view class="flex" wx:if="{{enterprise.demandDirection}}"><text class="com com-demandDirection text-blue margin-right-xs"></text>
+        <view>技术需求方向:</view>
+        <view class="flex-sub">{{enterprise.demandDirection}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.intended}}"><text class="com com-intended text-blue margin-right-xs"></text>
+        <view>意向对接企业/高校:</view>
+        <view class="flex-sub">{{enterprise.intended}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.skillExplain}}"><text class="com com-explain text-blue margin-right-xs"></text>
+        <view>说明:</view>
+        <view class="flex-sub">{{enterprise.skillExplain}}</view>
+      </view>
+
+    </view>
+  </view>
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-titles text-orange"></text> 政策申报需求
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content padding-tb-sm">
+      <view class="flex" wx:if="{{enterprise.declareType}}"><text class="com com-declareType text-blue margin-right-xs"></text>
+        <view>申报类型:</view>
+        <view class="flex-sub">{{declareTypeArr[enterprise.declareType]}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.declareName}}"><text class="com com-declareName text-blue margin-right-xs"></text>
+        <view>申报政策名称:</view>
+        <view class="flex-sub">{{enterprise.declareName}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.declareResult}}"><text class="com com-result text-blue margin-right-xs"></text>
+        <view>申报结果:</view>
+        <view class="flex-sub">{{declareResultArr[enterprise.declareResult]}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.declareAmount}}"><text class="com com-declareAmount text-blue margin-right-xs"></text>
+        <view>获批金额:</view>
+        <view class="flex-sub">{{enterprise.declareAmount}}</view>
+      </view>
+      <view class="flex" wx:if="{{enterprise.declareExplain}}"><text class="com com-explain text-blue margin-right-xs"></text>
+        <view>说明:</view>
+        <view class="flex-sub">{{enterprise.declareExplain}}</view>
+      </view>
+    </view>
+  </view>
+</view>
