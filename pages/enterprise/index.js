@@ -2,69 +2,71 @@ var that;
 import Api from "../../config/api";
 Page({
   data: {
-    enterprises:[]
+    enterprises: [],
+    classifyArrr: ["信息技术", "智能制造", "工业互联网", "物联网", "集成电路", "高端装备", "节能环保", "新材料", "新能源", "电子元器件", "汽车及零部件", "云计算和大数据", "生物医药", "5G产业", "人工智能", "石墨烯", "两机产业", "其他"]
   },
   async onLoad(options) {
     that = this;
-    if(getApp().globalData.auth){
-      that.getList("",1);
-    }else{
+    console.log(getApp().globalData.auth)
+    if (getApp().globalData.auth) {
+      that.getList("", 1);
+    } else {
       let res = await Api.login();
       console.log(res);
-      if(res.code==0){
+      if (res.code == 0) {
         that.setData({
-          auth:true
+          auth: true
         })
-        that.getList("",1);
-      }else{
+        that.getList("", 1);
+      } else {
         that.authModal();
       }
-    };    
+    };
   },
-  onReady(){
+  onReady() {
     let tabBar = this.selectComponent('#tabBar');
-    that.setData({
-      auth: getApp().globalData.auth
-    })
-    getApp().watch(function (value) {
-      tabBar.setData({
-        first: false,
-        auth: value,       
-        currentTab:"/pages/enterprise/index"
-      })
-    });   
-  },  
-  async getList(name,pageNum){
-    let res = await Api.enterprisePage({title:name,pageNum:pageNum});
+    // that.setData({
+    //   auth: getApp().globalData.auth
+    // })
+    // getApp().watch(function (value) {
+    //   tabBar.setData({
+    //     first: false,
+    //     auth: value,       
+    //     currentTab:"/pages/enterprise/index"
+    //   })
+    // });   
+  },
+  async getList(name, pageNum) {
+    let res = await Api.enterprisePage({ title: name, pageNum: pageNum });
     console.log(res);
-    if(res.code!='0'){
+    if (res.code != 0) {
       return that.authModal();
     }
-    let enterprises = that.data.enterprises||[];    
+    let enterprises = that.data.enterprises || [];
     enterprises = enterprises.concat(res.data.content);
     that.setData({
-      pageNum:pageNum,
-      name:name,
+      pageNum: pageNum,
+      name: name,
       endline: res.data.last,
-      enterprises:enterprises      
+      enterprises: enterprises
     });
   },
-  search(e){
+  search(e) {
     console.log(e);
     let value = e.detail.value;
     that.setData({
-      enterprises:[],
-      name:value.title
+      enterprises: [],
+      name: value.title
     });
-    that.getList(value.title,1)
+    that.getList(value.title, 1)
   },
-  onReachBottom(){
+  onReachBottom() {
     let endline = that.data.endline;
-    if(!endline){
+    if (!endline) {
       let pageNum = that.data.pageNum + 1;
       let name = that.data.name;
-      that.getList(name,pageNum);
-    }    
+      that.getList(name, pageNum);
+    }
   },
   authModal() {
     that.setData({
@@ -81,28 +83,33 @@ Page({
         iv: e.detail.iv
       })
       console.log(res);
-      if (res.code == '0') {
+      if (res.code == 0) {
         wx.setStorageSync('token', res.data);
         getApp().globalData.auth = true;
         that.setData({
           auth: true,
           authModal: false
         });
-        that.getList("",1);
+        that.getList("", 1);
       } else {
         that.setData({
-          msg:res.msg,
-          show:true,
-          type:"error"
+          msg: res.msg,
+          show: true,
+          type: "error"
         });
       }
     } else {
       that.setData({
-        msg:"您已拒绝授权获取手机号~",
-        show:true,
-        type:"error"
+        msg: "您已拒绝授权获取手机号~",
+        show: true,
+        type: "error"
       });
-      
+
     }
+  },
+  home() {
+    wx.switchTab({
+      url: '/pages/expert/index',
+    })
   }
 })

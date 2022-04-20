@@ -1,1 +1,5 @@
 @import "/style/enterprise.wxss";
+.com-icon{
+  width:30rpx;
+  height: 30rpx;
+}

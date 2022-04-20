@@ -16,16 +16,16 @@
   <navigator url="/pages/enterprise/detail?id={{item.id}}" class="cu-item" wx:for="{{enterprises}}" wx:key="index">
     <view class="content padding-tb-sm">
       <view>
-        <text class="cuIcon-profile text-blue margin-right-xs"></text>名称:{{item.title}}
+        <image class="com-icon margin-right-xs" src="/images/enterprise/title.png"></image>名称:{{item.title}}
       </view>
       <view class="text-sm">
-        <text class="iconfont icon-post margin-right-xs"></text>行业分类:{{item.classify?item.classify:'-'}}
+        <image class="com-icon margin-right-xs" src="/images/enterprise/classify.png"></image>行业分类:{{item.classify?classifyArrr[item.classify]:'-'}}
       </view>
       <view class="text-sm">
-        <text class="iconfont icon-direction margin-right-xs"></text>企业地址:{{item.address?item.address:'-'}}
+        <image class="com-icon margin-right-xs" src="/images/enterprise/address.png"></image>企业地址:{{item.address?item.address:'-'}}
       </view>
       <view class="text-sm">
-        <text class="iconfont icon-area margin-right-xs"></text>企业介绍:{{item.introduce?item.introduce:'-'}}
+        <image class="com-icon margin-right-xs" src="/images/enterprise/introduce.png"></image>企业介绍:{{item.introduce?item.introduce:'-'}}
       </view>      
     </view>
   </navigator>

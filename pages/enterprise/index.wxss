@@ -1,4 +1,8 @@
-
+@import "/style/enterprise.wxss";
 .margin-top {
   margin-top: 120rpx
+}
+.com-icon{
+  width:30rpx;
+  height: 30rpx;
 }
