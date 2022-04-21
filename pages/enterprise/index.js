@@ -11,30 +11,24 @@ Page({
     if (getApp().globalData.auth) {
       that.getList("", 1);
     } else {
-      let res = await Api.login();
-      console.log(res);
-      if (res.code == 0) {
-        that.setData({
-          auth: true
-        })
-        that.getList("", 1);
-      } else {
-        that.authModal();
-      }
+      that.authModal();
     };
   },
   onReady() {
     let tabBar = this.selectComponent('#tabBar');
-    // that.setData({
-    //   auth: getApp().globalData.auth
-    // })
-    // getApp().watch(function (value) {
-    //   tabBar.setData({
-    //     first: false,
-    //     auth: value,       
-    //     currentTab:"/pages/enterprise/index"
-    //   })
-    // });   
+    that.setData({
+      auth: getApp().globalData.auth
+    })
+    getApp().watch(function (value) {
+      tabBar.setData({
+        first: false,
+        auth: value,
+        currentTab: "/pages/enterprise/index"
+      })
+      if (value) {
+        that.getList("", 1);
+      }
+    });
   },
   async getList(name, pageNum) {
     let res = await Api.enterprisePage({ title: name, pageNum: pageNum });
