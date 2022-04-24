@@ -3,13 +3,14 @@ App({
   onLaunch() {
     let that = this;
     Api.login().then(res => {
-      console.log(res);
-      that.globalData.login = true;
-      if (res.code == 0) {
-        setTimeout(function () {
+      setTimeout(function () {
+        that.globalData.login = true;
+        if (res.code == 0) {
           that.globalData.auth = true;
-        }, 500);
-      }
+        }else{
+          that.globalData.auth = false;
+        }
+      }, 1000);
     });
   },
   globalData: {

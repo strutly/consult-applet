@@ -5,25 +5,19 @@ Page({
     enterprises: [],
     classifyArrr: ["信息技术", "智能制造", "工业互联网", "物联网", "集成电路", "高端装备", "节能环保", "新材料", "新能源", "电子元器件", "汽车及零部件", "云计算和大数据", "生物医药", "5G产业", "人工智能", "石墨烯", "两机产业", "其他"]
   },
-  async onLoad(options) {
+  onLoad(options) {
     that = this;
-    console.log(getApp().globalData.auth)
-    if (getApp().globalData.auth) {
-      that.getList("", 1);
-    } else {
-      that.authModal();
-    };
   },
   onReady() {
-    let tabBar = this.selectComponent('#tabBar');
-    that.setData({
-      auth: getApp().globalData.auth
-    })
+    let tabBar = this.selectComponent('#tabBar');    
     getApp().watch(function (value) {
       tabBar.setData({
         first: false,
         auth: value,
         currentTab: "/pages/enterprise/index"
+      })
+      that.setData({
+        authModal:!value
       })
       if (value) {
         that.getList("", 1);
@@ -84,7 +78,7 @@ Page({
           auth: true,
           authModal: false
         });
-        that.getList("", 1);
+        //that.getList("", 1);
       } else {
         that.setData({
           msg: res.msg,

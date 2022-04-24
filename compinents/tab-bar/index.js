@@ -16,6 +16,7 @@ Component({
       value:""
     }
   },
+  
   methods: {
     switch(e) {
       if (e.currentTarget.dataset.url == this.data.currentTab) return;
