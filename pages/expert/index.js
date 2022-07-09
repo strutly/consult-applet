@@ -10,14 +10,12 @@ Page({
     that.getList("",1); 
   },
   onReady(){
-    let tabBar = this.selectComponent('#tabBar');
-    getApp().watch(function (value) {
-      tabBar.setData({
-        first: true,
-        auth:value,       
-        currentTab:"/pages/expert/index"
+    getApp().watch(function (value) {      
+      that.setData({
+        auth:value
       })
-    })    
+    });
+       
   },  
   async getList(name,pageNum){
     let res = await Api.expertPage({name:name,pageNum:pageNum});

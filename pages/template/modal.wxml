@@ -4,7 +4,7 @@
       <view class="content">提示</view>
     </view>
     <view class="padding-xl">
-      您未认证或登陆,请认证后再进行
+      您未认证或登录,请认证后再进行
     </view>
     <view class="cu-bar bg-white justify-end">
       <view class="action">

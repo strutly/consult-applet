@@ -1,0 +1,116 @@
+<tips msg="{{msg}}" show="{{show}}" type="{{type}}"></tips>
+
+<form bindsubmit="submit"  wx:if="{{apply.status==null || apply.status==0}}">
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      注册类型
+    </view>
+    <view class="action">
+      <radio-group class="flex" bindchange="categoryChange">
+        <lable class="flex align-center">
+          <radio class='blue radio margin-right-sm' value="0" checked="{{apply.type==0}}" disabled="{{apply.id>0}}"></radio>机构客户
+        </lable>
+        <lable class="flex align-center">
+          <radio class='blue radio margin-lr-sm' value="1" checked="{{apply.type==1}}" disabled="{{apply.id>0}}"></radio>行业专家
+        </lable>
+      </radio-group>
+    </view>
+  </view>
+  <input hidden wx:if="{{apply.id>0}}" value="{{apply.id}}" name="id"></input>
+  <input hidden name="type" value="{{apply.type}}"></input>
+  <input hidden name="sex" value="{{apply.sex}}"></input>
+  <view class="cu-form-group">
+    <text class="title" space="ensp">手 机 号</text>
+    <input placeholder="请授权获取手机号" name="phone" value="{{apply.phone}}" disabled="true"></input>
+    <button class='cu-btn bg-blue shadow' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权获取</button>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">真实姓名</view>
+    <input placeholder="请输入真实姓名" name="name" value="{{apply.name}}"></input>
+  </view>
+
+  <block wx:if="{{apply.type==0}}">
+    <view class="cu-form-group solid-bottom">
+      <view class="title">公司名称</view>
+      <input placeholder="请输入公司名称" name="title" value="{{apply.title}}"></input>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="cu-form-group">
+      <text class="title" space="emsp">性  别</text>
+
+      <picker mode="selector" range="{{sexArray}}" bindchange="sexChange">
+        <view class="picker">
+          {{sexArray[apply.sex]}}
+        </view>
+      </picker>
+
+    </view>
+    <view class="cu-form-group">
+      <text class="title" space="emsp">领  域</text>
+      <input placeholder="请输入您的领域" name="area" value="{{apply.area}}"></input>
+    </view>
+    <view class="cu-form-group align-start solid-bottom">
+      <text class="title" space="emsp">经  历</text>
+      <textarea maxlength="-1" name="through" placeholder="请输入您的经历" style="height:200rpx;" value="{{apply.through}}"></textarea>
+    </view>
+  </block>
+  <view class="padding flex flex-direction bg-white">
+    <button class="cu-btn bg-blue lg" formType="submit">提交</button>
+  </view>
+</form>
+
+<view class="cu-list menu" wx:else>
+  <view class="cu-item">
+    <view class="content">
+      注册类型
+    </view>
+    <view class="action">
+      {{apply.type==0?'机构客户':'行业专家'}}
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      真实姓名
+    </view>
+    <view class="action">
+      {{apply.name}}
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="title" space="ensp">手 机 号</text>
+    </view>
+    <view class="action">
+      {{apply.phone}}
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="title" space="emsp">性  别</text>
+    </view>
+    <view class="action">
+      {{sexArray[apply.sex]}}
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="title" space="emsp">领  域</text>
+    </view>
+    <view class="action">
+      {{apply.area}}
+    </view>
+  </view>
+  <view class="cu-form-group align-start solid-bottom">
+      <text class="title" space="emsp">经  历</text>
+      <view class="textarea">{{apply.through}}</view>
+    </view>
+  <view class="cu-item">
+    <view class="content">
+      注册状态
+    </view>
+    <view class="action">
+      {{apply.status==1?'已同意':'已经拒绝'}}
+    </view>
+  </view>
+</view>

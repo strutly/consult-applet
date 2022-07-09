@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "tips":"/compinents/tips/index",
-    "tabBar":"/compinents/tab-bar/index"
+    "tips":"/components/tips/index",
+    "tabBar":"/components/tab-bar/index"
   },
   "navigationBarTitleText":"企业列表"
 }

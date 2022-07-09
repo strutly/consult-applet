@@ -1,0 +1,6 @@
+<view wx:if="{{auth}}">
+  <view class="tab"  bindtap="switch" data-url="/pages/{{type}}/index">
+    <image src="/images/{{type}}.png"></image>
+  </view>
+
+</view>

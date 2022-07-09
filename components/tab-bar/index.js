@@ -5,21 +5,17 @@ Component({
   properties: {
     auth:{
       type:Boolean,
-      value:false
+      value:true
     },
-    first:{
-      type:Boolean,
-      value:false
-    },
-    currentTab:{
+    type:{
       type:String,
-      value:""
+      value:"expert"
     }
   },
   
   methods: {
     switch(e) {
-      if (e.currentTarget.dataset.url == this.data.currentTab) return;
+      console.log(e)
       wx.switchTab({
         url: e.currentTarget.dataset.url,
       })

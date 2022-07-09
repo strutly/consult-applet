@@ -1,0 +1,30 @@
+<view class="solid-bottom text-xl padding text-center margin-bottom margin-top">
+  <text class="text-blue text-bold">米珈咨询</text>
+</view>
+<view class="flex flex-wrap justify-center text-center text-lg text-black">
+  <view class="padding basis-df margin-top">
+    <text class="cuIcon-notice text-blue"></text>
+    <text class="margin-left">企业信息</text>
+  </view>
+  <view class="padding basis-df margin-top">
+    <text class="cuIcon-message text-blue"></text>
+    <text class="margin-left">沟通交流</text>
+  </view>
+  <view class="padding basis-df margin-top">
+    <text class="cuIcon-cascades text-blue"></text>
+    <text class="margin-left">专家信息</text>
+  </view>
+  <view class="padding basis-df margin-top">
+    <text class="cuIcon-newshot text-blue"></text>
+    <text class="margin-left">科普知识</text>
+  </view>
+</view>
+<view class="padding margin-top">
+  <view class="padding-xl">
+    <view class="padding flex">
+      <navigator open-type="reLaunch" url="/pages/index/reg?type=0" class="cu-btn bg-blue lg flex-sub margin radius-lg">机构客户</navigator>
+      <navigator open-type="reLaunch" url="/pages/index/reg?type=1" class="cu-btn bg-blue lg radius-lg flex-sub margin">行业专家</navigator> 
+    </view>
+    <navigator open-type="reLaunch" url="/pages/expert/index" class="text-center margin-tb-sm lg">路过,先逛逛~</navigator>
+  </view>
+</view>

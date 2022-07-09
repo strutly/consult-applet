@@ -30,6 +30,7 @@
     </view>
   </navigator>
 </view>
-<tabBar id="tabBar" auth="{{auth}}"></tabBar>
+
+<tabBar id="tabBar" auth="{{auth}}" type="expert"></tabBar>
 
 

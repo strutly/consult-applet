@@ -31,6 +31,7 @@ App({
       }
     })
     if (obj.login) {
+      console.log(obj)
       method(obj.auth);
     }
   }

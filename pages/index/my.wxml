@@ -1,0 +1,28 @@
+<topTip show="{{show}}" type="{{type}}" msg="{{msg}}"></topTip>
+<view class="padding text-center bg-white">
+  <image class="cu-avatar xl round" src="{{userInfo.avatarUrl||'/images/headimg.png'}}"></image>
+  <view>
+    <button class="cu-btn bg-white" bindtap="getUserProfile">{{userInfo.nickName||'微信授权'}}</button>
+  </view> 
+</view>
+<view class="cu-list menu solid-top">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-profile text-blue"></text>
+      <text class="text-grey">我的信息</text>
+    </view>
+  </view>
+  <navigator hover-class="none" url="/pages/appointment/list" class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-profile text-blue"></text>
+      <text class="text-grey">我的预约</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/index/reg" class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-profile text-blue"></text>
+      <text class="text-grey">注册信息</text>
+    </view>
+  </navigator>
+</view>
+<tabBar selected="2" mold="{{mold}}"></tabBar>

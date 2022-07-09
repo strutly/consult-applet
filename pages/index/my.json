@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "topTip":"/components/tips/index",
+    "tabBar":"/components/tab-bar/index"
+  }
+}
