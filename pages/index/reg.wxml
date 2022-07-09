@@ -85,26 +85,37 @@
       {{apply.phone}}
     </view>
   </view>
-  <view class="cu-item">
+  <block wx:if="{{apply.type==1}}">
+    <view class="cu-item">
+      <view class="content">
+        <text class="title" space="emsp">性  别</text>
+      </view>
+      <view class="action">
+        {{sexArray[apply.sex]}}
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="title" space="emsp">领  域</text>
+      </view>
+      <view class="action">
+        {{apply.area}}
+      </view>
+    </view>
+  </block>
+  <view class="cu-item" wx:else>
     <view class="content">
-      <text class="title" space="emsp">性  别</text>
+      公司名称
     </view>
     <view class="action">
-      {{sexArray[apply.sex]}}
+      {{apply.title}}
     </view>
   </view>
-  <view class="cu-item">
-    <view class="content">
-      <text class="title" space="emsp">领  域</text>
-    </view>
-    <view class="action">
-      {{apply.area}}
-    </view>
-  </view>
+
   <view class="cu-form-group align-start solid-bottom">
-      <text class="title" space="emsp">经  历</text>
-      <view class="textarea">{{apply.through}}</view>
-    </view>
+    <text class="title" space="emsp">经  历</text>
+    <view class="textarea">{{apply.through}}</view>
+  </view>
   <view class="cu-item">
     <view class="content">
       注册状态
