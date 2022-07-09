@@ -3,19 +3,17 @@ Component({
     
   },
   properties: {
-    auth:{
-      type:Boolean,
-      value:true
+    mold:{
+      type:Number,
+      value:0
     },
-    type:{
-      type:String,
-      value:"expert"
+    selected:{
+      type:Number,
+      value:0
     }
   },
-  
   methods: {
     switch(e) {
-      console.log(e)
       wx.switchTab({
         url: e.currentTarget.dataset.url,
       })

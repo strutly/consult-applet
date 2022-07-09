@@ -31,6 +31,6 @@
   </navigator>
 </view>
 
-<tabBar id="tabBar" auth="{{auth}}" type="expert"></tabBar>
+<tabBar id="tabBar" selected="1" mold="{{mold}}"></tabBar>
 
 

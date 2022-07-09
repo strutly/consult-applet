@@ -1,6 +1,20 @@
-<view wx:if="{{auth}}">
-  <view class="tab"  bindtap="switch" data-url="/pages/{{type}}/index">
-    <image src="/images/{{type}}.png"></image>
+<view class="cu-bar tabbar bg-white shadow foot" wx:if="{{mold!=1}}">  
+  <view class="action" bindtap="switch" data-url="/pages/expert/index">
+    <view class='cuIcon-cu-image'>
+      <image  src="/images/expert{{selected==0?1:0}}.png"></image>
+    </view>
+    <view class="{{selected==0?'text-yellow':'text-gray'}}">专家</view>
   </view>
-
+  <view class="action" bindtap="switch" data-url="/pages/enterprise/index"  wx:if="{{mold==2}}">
+    <view class='cuIcon-cu-image'>
+      <image  src="/images/enterprise{{selected==1?1:0}}.png"></image>
+    </view>
+    <view class="{{selected==1?'text-yellow':'text-gray'}}">企业</view>
+  </view>
+  <view class="action" bindtap="switch"  data-url="/pages/index/my">
+    <view class='cuIcon-cu-image'>
+      <image  src="/images/user{{selected==2?1:0}}.png"></image>
+    </view>
+    <view class="{{selected==2?'text-yellow':'text-gray'}}">个人</view>
+  </view>
 </view>

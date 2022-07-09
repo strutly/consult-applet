@@ -6,39 +6,48 @@
   </view>
   <view class="cu-item">
     <view class="content padding-tb-sm">
-      <view class="flex" wx:if="{{enterprise.title}}"><image class="com-icon margin-right-xs" src="/images/enterprise/title.png"></image>
+      <view class="flex" wx:if="{{enterprise.title}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/title.png"></image>
         <view>企业名称:</view>
         <view class="flex-sub">{{enterprise.title}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.demand}}"><image class="com-icon margin-right-xs" src="/images/enterprise/demand.png"></image>
+      <view class="flex" wx:if="{{enterprise.demand}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/demand.png"></image>
         <view>企业需求:</view>
         <view class="flex-sub">{{demandArr[enterprise.demand]}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.classify}}"><image class="com-icon margin-right-xs" src="/images/enterprise/classify.png"></image>
+      <view class="flex" wx:if="{{enterprise.classify}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/classify.png"></image>
         <view>行业分类:</view>
         <view class="flex-sub">{{classifyArr[enterprise.classify]}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.regtime}}"><image class="com-icon margin-right-xs" src="/images/enterprise/regtime.png"></image>
+      <view class="flex" wx:if="{{enterprise.regtime}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/regtime.png"></image>
         <view>注册时间:</view>
         <view class="flex-sub">{{enterprise.regtime}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.introduce}}"><image class="com-icon margin-right-xs" src="/images/enterprise/introduce.png"></image>
+      <view class="flex" wx:if="{{enterprise.introduce}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/introduce.png"></image>
         <view>企业介绍:</view>
         <view class="flex-sub">{{enterprise.introduce}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.address}}"><image class="com-icon margin-right-xs" src="/images/enterprise/address.png"></image>
+      <view class="flex" wx:if="{{enterprise.address}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/address.png"></image>
         <view>企业地址:</view>
         <view class="flex-sub">{{enterprise.address}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.contactName}}"><image class="com-icon margin-right-xs" src="/images/enterprise/contactName.png"></image>
+      <view class="flex" wx:if="{{enterprise.contactName}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/contactName.png"></image>
         <view>企业联系人:</view>
         <view class="flex-sub">{{enterprise.contactName}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.contactPhone}}"><image class="com-icon margin-right-xs" src="/images/enterprise/contactPhone.png"></image>
+      <view class="flex" wx:if="{{enterprise.contactPhone}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/contactPhone.png"></image>
         <view>企业联系方式:</view>
         <view class="flex-sub">{{enterprise.contactPhone}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.director}}"><image class="com-icon margin-right-xs" src="/images/enterprise/director.png"></image>
+      <view class="flex" wx:if="{{enterprise.director}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/director.png"></image>
         <view>项目负责人:</view>
         <view class="flex-sub">{{enterprise.director}}</view>
       </view>
@@ -51,19 +60,23 @@
   </view>
   <view class="cu-item">
     <view class="content padding-tb-sm">
-      <view class="flex" wx:if="{{enterprise.visitStatus}}"><image class="com-icon margin-right-xs" src="/images/enterprise/visitStatus.png"></image>
+      <view class="flex" wx:if="{{enterprise.visitStatus}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/visitStatus.png"></image>
         <view>走访阶段:</view>
         <view class="flex-sub">{{enterprise.visitStatus}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.communicationTime}}"><image class="com-icon margin-right-xs" src="/images/enterprise/communicationTime.png"></image>
+      <view class="flex" wx:if="{{enterprise.communicationTime}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/communicationTime.png"></image>
         <view>沟通时间:</view>
         <view class="flex-sub">{{enterprise.communicationTime}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.feedback}}"><image class="com-icon margin-right-xs" src="/images/enterprise/feedback.png"></image>
+      <view class="flex" wx:if="{{enterprise.feedback}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/feedback.png"></image>
         <view>反馈/方案:</view>
         <view class="flex-sub">{{enterprise.feedback}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.result}}"><image class="com-icon margin-right-xs" src="/images/enterprise/result.png"></image>
+      <view class="flex" wx:if="{{enterprise.result}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/result.png"></image>
         <view>结果:</view>
         <view class="flex-sub">{{enterprise.result}}</view>
       </view>
@@ -79,35 +92,43 @@
 
 
 
-      <view class="flex" wx:if="{{enterprise.lastRevenue}}"><image class="com-icon margin-right-xs" src="/images/enterprise/lastRevenue.png"></image>
+      <view class="flex" wx:if="{{enterprise.lastRevenue}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/lastRevenue.png"></image>
         <view>上年度营收（万元）:</view>
         <view class="flex-sub">{{enterprise.lastRevenue}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.lastInvestment}}"><image class="com-icon margin-right-xs" src="/images/enterprise/lastInvestment.png"></image>
+      <view class="flex" wx:if="{{enterprise.lastInvestment}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/lastInvestment.png"></image>
         <view>上年度研发投入（万元）:</view>
         <view class="flex-sub">{{enterprise.lastInvestment}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.propertyNum}}"><image class="com-icon margin-right-xs" src="/images/enterprise/propertyNum.png"></image>
+      <view class="flex" wx:if="{{enterprise.propertyNum}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/propertyNum.png"></image>
         <view>知识产权数量:</view>
         <view class="flex-sub">{{enterprise.propertyNum}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.staffNum}}"><image class="com-icon margin-right-xs" src="/images/enterprise/staffNum.png"></image>
+      <view class="flex" wx:if="{{enterprise.staffNum}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/staffNum.png"></image>
         <view>员工人数:</view>
         <view class="flex-sub">{{enterprise.staffNum}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.abroadNum}}"><image class="com-icon margin-right-xs" src="/images/enterprise/abroadNum.png"></image>
+      <view class="flex" wx:if="{{enterprise.abroadNum}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/abroadNum.png"></image>
         <view>留学归国人员数:</view>
         <view class="flex-sub">{{enterprise.abroadNum}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.doctorNum}}"><image class="com-icon margin-right-xs" src="/images/enterprise/doctorNum.png"></image>
+      <view class="flex" wx:if="{{enterprise.doctorNum}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/doctorNum.png"></image>
         <view>博士人数:</view>
         <view class="flex-sub">{{enterprise.doctorNum}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.masterNum}}"><image class="com-icon margin-right-xs" src="/images/enterprise/masterNum.png"></image>
+      <view class="flex" wx:if="{{enterprise.masterNum}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/masterNum.png"></image>
         <view>硕士人数:</view>
         <view class="flex-sub">{{enterprise.masterNum}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.artisanNum}}"><image class="com-icon margin-right-xs" src="/images/enterprise/artisanNum.png"></image>
+      <view class="flex" wx:if="{{enterprise.artisanNum}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/artisanNum.png"></image>
         <view>技术人员:</view>
         <view class="flex-sub">{{enterprise.artisanNum}}</view>
       </view>
@@ -122,15 +143,18 @@
   <view class="cu-item">
     <view class="content padding-tb-sm">
 
-      <view class="flex" wx:if="{{enterprise.talentLevels}}"><image class="com-icon margin-right-xs" src="/images/enterprise/talentLevels.png"></image>
+      <view class="flex" wx:if="{{enterprise.talentLevels}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/talentLevels.png"></image>
         <view>引进人才层次:</view>
         <view class="flex-sub">{{enterprise.talentLevels}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.cooperationMode}}"><image class="com-icon margin-right-xs" src="/images/enterprise/cooperationMode.png"></image>
+      <view class="flex" wx:if="{{enterprise.cooperationMode}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/cooperationMode.png"></image>
         <view>意向合作模式:</view>
         <view class="flex-sub">{{cooperationModeArr[enterprise.cooperationMode]}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.talentExplain}}"><image class="com-icon margin-right-xs" src="/images/enterprise/explain.png"></image>
+      <view class="flex" wx:if="{{enterprise.talentExplain}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/explain.png"></image>
         <view>说明:</view>
         <view class="flex-sub">{{enterprise.talentExplain}}</view>
       </view>
@@ -145,15 +169,18 @@
   <view class="cu-item">
     <view class="content padding-tb-sm">
 
-      <view class="flex" wx:if="{{enterprise.demandDirection}}"><image class="com-icon margin-right-xs" src="/images/enterprise/demandDirection.png"></image>
+      <view class="flex" wx:if="{{enterprise.demandDirection}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/demandDirection.png"></image>
         <view>技术需求方向:</view>
         <view class="flex-sub">{{enterprise.demandDirection}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.intended}}"><image class="com-icon margin-right-xs" src="/images/enterprise/intended.png"></image>
+      <view class="flex" wx:if="{{enterprise.intended}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/intended.png"></image>
         <view>意向对接企业/高校:</view>
         <view class="flex-sub">{{enterprise.intended}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.skillExplain}}"><image class="com-icon margin-right-xs" src="/images/enterprise/explain.png"></image>
+      <view class="flex" wx:if="{{enterprise.skillExplain}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/explain.png"></image>
         <view>说明:</view>
         <view class="flex-sub">{{enterprise.skillExplain}}</view>
       </view>
@@ -167,23 +194,28 @@
   </view>
   <view class="cu-item">
     <view class="content padding-tb-sm">
-      <view class="flex" wx:if="{{enterprise.declareType}}"><image class="com-icon margin-right-xs" src="/images/enterprise/declareType.png"></image>
+      <view class="flex" wx:if="{{enterprise.declareType}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/declareType.png"></image>
         <view>申报类型:</view>
         <view class="flex-sub">{{declareTypeArr[enterprise.declareType]}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.declareName}}"><image class="com-icon margin-right-xs" src="/images/enterprise/declareName.png"></image>
+      <view class="flex" wx:if="{{enterprise.declareName}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/declareName.png"></image>
         <view>申报政策名称:</view>
         <view class="flex-sub">{{enterprise.declareName}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.declareResult}}"><image class="com-icon margin-right-xs" src="/images/enterprise/result.png"></image>
+      <view class="flex" wx:if="{{enterprise.declareResult}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/result.png"></image>
         <view>申报结果:</view>
         <view class="flex-sub">{{declareResultArr[enterprise.declareResult]}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.declareAmount}}"><image class="com-icon margin-right-xs" src="/images/enterprise/declareAmount.png"></image>
+      <view class="flex" wx:if="{{enterprise.declareAmount}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/declareAmount.png"></image>
         <view>获批金额:</view>
         <view class="flex-sub">{{enterprise.declareAmount}}</view>
       </view>
-      <view class="flex" wx:if="{{enterprise.declareExplain}}"><image class="com-icon margin-right-xs" src="/images/enterprise/explain.png"></image>
+      <view class="flex" wx:if="{{enterprise.declareExplain}}">
+        <image class="com-icon margin-right-xs" src="/images/enterprise/explain.png"></image>
         <view>说明:</view>
         <view class="flex-sub">{{enterprise.declareExplain}}</view>
       </view>

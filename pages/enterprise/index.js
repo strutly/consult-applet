@@ -10,12 +10,13 @@ Page({
     that = this;
   },
   onReady() {
-    getApp().watch(function (value) {      
+    getApp().watch(function (value) {
+      console.log(value)
       that.setData({
-        auth:value,
-        authModal:!value
+        mold:value,
+        authModal:value!=2
       })
-      if (value) {
+      if (value==2) {
         that.getList("", 1);
       }
     });
@@ -68,7 +69,7 @@ Page({
       })
       console.log(res);
       if (res.code == 0) {
-        wx.setStorageSync('token', res.data);
+        wx.setStorageSync('authToken', res.data);
         getApp().globalData.auth = true;
         that.setData({
           auth: true,
@@ -76,6 +77,7 @@ Page({
         });
         //that.getList("", 1);
       } else {
+        wx.removeStorageSync('code');
         that.setData({
           msg: res.msg,
           show: true,
@@ -88,7 +90,6 @@ Page({
         show: true,
         type: "error"
       });
-
     }
   },
   home() {

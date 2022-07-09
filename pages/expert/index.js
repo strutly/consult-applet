@@ -10,9 +10,10 @@ Page({
     that.getList("",1); 
   },
   onReady(){
-    getApp().watch(function (value) {      
+    getApp().watch(function (value) {
+      console.log(value)      
       that.setData({
-        auth:value
+        mold:value
       })
     });
        

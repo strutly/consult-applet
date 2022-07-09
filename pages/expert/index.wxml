@@ -30,4 +30,4 @@
     </view>
   </navigator>
 </view>
-<tabBar id="tabBar" auth="{{auth}}" type="enterprise"></tabBar>
+<tabBar id="tabBar" mold="{{mold}}"  selected="0"></tabBar>

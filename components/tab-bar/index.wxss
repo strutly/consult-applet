@@ -1,18 +1,1 @@
-.tab{
-  position: fixed;
-  bottom: calc(60rpx + constant(safe-area-inset-bottom));
-  bottom: calc(60rpx + env(safe-area-inset-bottom));
-  right: 60rpx;
-  width: 120rpx;
-  height: 120rpx;
-  background-color: rgb(192, 192, 192,0.7);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-}
-.tab image{  
-  width: 80rpx;
-  height: 80rpx;
-}
+@import "/style/colorUI/main.wxss";

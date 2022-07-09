@@ -1,14 +1,20 @@
 {
   "pages": [
+    
+    "pages/index/home","pages/expert/form",
     "pages/expert/index",
+    "pages/index/my",
     "pages/enterprise/index",
     "pages/expert/detail",
-    "pages/enterprise/detail"
+    "pages/enterprise/detail",
+    "pages/index/reg",
+    "pages/appointment/list",
+    "pages/appointment/form"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "米珈咨询",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -19,6 +25,9 @@
       },
       {
         "pagePath": "pages/enterprise/index"
+      },
+      {
+        "pagePath": "pages/index/my"
       }
     ]
   },
