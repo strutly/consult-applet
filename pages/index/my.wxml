@@ -24,5 +24,14 @@
       <text class="text-grey">注册信息</text>
     </view>
   </navigator>
+  <view class="cu-item cu-bottom margin-top" bindtap="loginModal">
+    <view class="content">
+      <text class="cuIcon-exit text-blue"></text>
+      <text class="text-grey">切换账号</text>
+    </view>
+  </view>
 </view>
+<loginModal loginModal="{{loginModal}}"></loginModal>
+
+
 <tabBar selected="2" mold="{{mold}}"></tabBar>

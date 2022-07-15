@@ -5,11 +5,14 @@ Page({
   data: {
     category: 0,
     sexArray: ['请选择您的性别', '男', '女'],
-    sex: 0
+    sex: 0,
+    phone: "",
+    countdown: "获取验证码",
+    disabled: false
   },
   async onLoad(options) {
     that = this;
-    let apply = {type:options.type,id:-1,sex:0};
+    let apply = {type:options.type||0,id:-1,sex:0};
     let res = await Api.getApply();
     console.log(res);
     apply = res.data || apply;
@@ -21,6 +24,10 @@ Page({
   initValidate(index) {
     const rules = [{
       phone: {
+        required: true,
+        tel:true
+      },
+      code:{
         required: true
       },
       name: {
@@ -31,6 +38,10 @@ Page({
       }
     }, {
       phone: {
+        required: true,
+        tel:true
+      },
+      code:{
         required: true
       },
       name: {
@@ -48,7 +59,11 @@ Page({
     }]
     const messages = [{
       phone: {
-        required: "请授权获取手机号"
+        required: "请输入正确的手机号",
+        tel:"请输入正确的手机号"
+      },
+      code:{
+        required: "请输入验证码"
       },
       name: {
         required: "请输入您的姓名"
@@ -58,7 +73,11 @@ Page({
       }
     }, {
       phone: {
-        required: "请授权获取手机号"
+        required: "请输入正确的手机号",
+        tel:"请输入正确的手机号"
+      },
+      code:{
+        required: "请输入验证码"
       },
       name: {
         required: "请输入您的姓名"
@@ -75,6 +94,50 @@ Page({
     }]
     that.WxValidate = new WxValidate(rules[index], messages[index]);
   },
+  phoneChange(e) {
+    console.log(e);
+    this.setData({
+      ['apply.phone']: e.detail.value
+    })
+  },
+  hideModal() {
+    this.setData({
+      loginModal: false
+    })
+  },
+  getCode() {
+    let phone = this.data.apply.phone;
+    let reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+    console.log(reg.test(phone));
+    if (!reg.test(phone)) return this.showTips("请输入正确的手机号");
+    Api.getPhoneCode({
+      phone: phone
+    }).then(res => {
+      console.log(res);
+    });
+
+    this.timer();
+  },
+  timer() {
+    let that = this;
+    let min = 0
+    let max = 60;
+    let countdown = setInterval(() => {
+      if (max > min) {
+        max--;
+        that.setData({
+          countdown: max,
+          disabled: true
+        })
+      } else {
+        that.setData({
+          disabled: false,
+          countdown: "获取验证码"
+        })
+        clearInterval(countdown);
+      }
+    }, 1000)
+  },
   categoryChange(e) {
     console.log(e);
     let index = e.detail.value;
@@ -89,31 +152,7 @@ Page({
       ['apply.sex']: e.detail.value
     })
   },
-  async getPhoneNumber(e) {
-    console.log(e);
-    if (e.detail.errMsg === "getPhoneNumber:ok") {
-      let res = await Api.getPhoneByCode(e.detail.code
-      )
-      console.log(res);
-      if (res.code == 0) {
-        that.setData({
-          'apply.phone': res.data
-        })
-      } else {
-        that.setData({
-          msg: res.msg,
-          show: true,
-          type: "error"
-        });
-      }
-    } else {
-      that.setData({
-        msg: "您已拒绝授权获取手机号~",
-        show: true,
-        type: "error"
-      });
-    }
-  },
+
   showTips(msg, type = "error") {
     that.setData({
       msg: msg,

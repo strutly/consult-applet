@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "topTip":"/components/tips/index",
-    "tabBar":"/components/tab-bar/index"
+    "tabBar":"/components/tab-bar/index",
+    "loginModal":"/components/login/index"
   }
 }

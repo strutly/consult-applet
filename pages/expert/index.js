@@ -3,6 +3,8 @@ import Api from "../../config/api";
 Page({
   data: {
     show:false,
+    msg:'',
+    type:'error',
     auth:false,
   },
   async onLoad(options) {

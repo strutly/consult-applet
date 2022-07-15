@@ -48,5 +48,7 @@
     "ignore": [],
     "include": []
   },
-  "appid": "wxd85691209e78f378"
+  "appid": "wxd85691209e78f378",
+  "ignoreUploadUnusedFiles": false,
+  "ignoreDevUnusedFiles": false
 }

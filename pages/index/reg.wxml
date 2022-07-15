@@ -1,6 +1,6 @@
 <tips msg="{{msg}}" show="{{show}}" type="{{type}}"></tips>
 
-<form bindsubmit="submit"  wx:if="{{apply.status==null || apply.status==0}}">
+<form bindsubmit="submit" wx:if="{{apply.status==null || apply.status==0}}">
   <view class="cu-bar bg-white solid-bottom">
     <view class="action">
       注册类型
@@ -19,10 +19,15 @@
   <input hidden wx:if="{{apply.id>0}}" value="{{apply.id}}" name="id"></input>
   <input hidden name="type" value="{{apply.type}}"></input>
   <input hidden name="sex" value="{{apply.sex}}"></input>
+
   <view class="cu-form-group">
     <text class="title" space="ensp">手 机 号</text>
-    <input placeholder="请授权获取手机号" name="phone" value="{{apply.phone}}" disabled="true"></input>
-    <button class='cu-btn bg-blue shadow' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权获取</button>
+    <input placeholder="请输入手机号" name="phone" value="{{apply.phone}}" bindinput="phoneChange"></input>
+    <button class='cu-btn bg-green shadow' disabled="{{disabled}}" bindtap="getCode">{{countdown}}</button>
+  </view>
+  <view class="cu-form-group">
+    <text class="title" space="ensp">验 证 码</text>
+    <input placeholder="请输入验证码" name="code"></input>
   </view>
   <view class="cu-form-group">
     <view class="title">真实姓名</view>
@@ -37,7 +42,7 @@
   </block>
   <block wx:else>
     <view class="cu-form-group">
-      <text class="title" space="emsp">性  别</text>
+      <text class="title" space="emsp">性 别</text>
 
       <picker mode="selector" range="{{sexArray}}" bindchange="sexChange">
         <view class="picker">
@@ -47,11 +52,11 @@
 
     </view>
     <view class="cu-form-group">
-      <text class="title" space="emsp">领  域</text>
+      <text class="title" space="emsp">领 域</text>
       <input placeholder="请输入您的领域" name="area" value="{{apply.area}}"></input>
     </view>
     <view class="cu-form-group align-start solid-bottom">
-      <text class="title" space="emsp">经  历</text>
+      <text class="title" space="emsp">经 历</text>
       <textarea maxlength="-1" name="through" placeholder="请输入您的经历" style="height:200rpx;" value="{{apply.through}}"></textarea>
     </view>
   </block>
@@ -85,10 +90,15 @@
       {{apply.phone}}
     </view>
   </view>
+
+
+  
+
+
   <block wx:if="{{apply.type==1}}">
     <view class="cu-item">
       <view class="content">
-        <text class="title" space="emsp">性  别</text>
+        <text class="title" space="emsp">性 别</text>
       </view>
       <view class="action">
         {{sexArray[apply.sex]}}
@@ -96,7 +106,7 @@
     </view>
     <view class="cu-item">
       <view class="content">
-        <text class="title" space="emsp">领  域</text>
+        <text class="title" space="emsp">领 域</text>
       </view>
       <view class="action">
         {{apply.area}}
@@ -113,7 +123,7 @@
   </view>
 
   <view class="cu-form-group align-start solid-bottom">
-    <text class="title" space="emsp">经  历</text>
+    <text class="title" space="emsp">经 历</text>
     <view class="textarea">{{apply.through}}</view>
   </view>
   <view class="cu-item">

@@ -7,14 +7,13 @@ Page({
   onLoad(options) {
     that = this;    
   },
-  onReady(){
+  onShow(){
     getApp().watch(function (value) {
       console.log(value)      
       that.setData({
         mold:value
       })
-    });
-       
+    });       
   }, 
   showTips(msg,type="error"){
     that.setData({
@@ -52,4 +51,9 @@ Page({
       that.showTips(res.msg, "error");
     }
   },
+  loginModal(){
+    that.setData({
+      loginModal:true
+    })
+  }
 })

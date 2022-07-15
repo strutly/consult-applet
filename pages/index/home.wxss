@@ -1,1 +1,7 @@
-/* pages/index/home.wxss */
+.foot {
+  position: fixed;
+  text-align: center;
+  bottom: 100rpx;
+  left: 0;
+  right: 0;
+}

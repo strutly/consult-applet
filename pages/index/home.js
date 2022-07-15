@@ -1,6 +1,4 @@
 var that;
-const app = getApp();
-import Api from '../../config/api';
 Page({
   data: {
 
@@ -8,7 +6,7 @@ Page({
   onLoad(options) {
     that = this;
   },
-  onReady(){
+  onShow(){
     getApp().watch(function (value) {
       console.log(value)
       if(value==1){
@@ -23,4 +21,9 @@ Page({
     });
        
   }, 
+  loginModal(){
+    that.setData({
+      loginModal:true
+    })
+  }
 })

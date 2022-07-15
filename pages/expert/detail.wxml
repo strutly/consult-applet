@@ -35,7 +35,7 @@
     </view>
   </view>
   <view class="padding flex flex-direction bg-white">
-    <navigator hover-class="none" url="/pages/appointment/form?id={{info.uid}}" class="cu-btn bg-blue lg"  wx:if="{{info.uid}}">咨询</navigator>
+    <navigator hover-class="none" url="/pages/appointment/form?id={{info.uid}}" class="cu-btn bg-blue lg margin-bottom"  wx:if="{{info.uid}}">咨询</navigator>
     <navigator hover-class="none" url="/pages/expert/form?id={{info.id}}" class="cu-btn bg-cyan lg" wx:if="{{mold==2}}">编辑</navigator>
   </view>
 
