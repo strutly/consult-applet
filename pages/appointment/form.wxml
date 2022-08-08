@@ -1,5 +1,6 @@
 <tips msg="{{msg}}" show="{{show}}" type="{{type}}"></tips>
 <form bindsubmit="submit">
+  <input name="toid" value="{{toid}}" hidden></input>
   <view class="cu-form-group margin-top">
     <view class="title">问题类型</view>
     <picker bindchange="pickerChange" value="{{formData.type}}" data-name="type" name="type" mode="selector" range="{{types}}">

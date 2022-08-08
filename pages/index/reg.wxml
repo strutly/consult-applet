@@ -90,11 +90,6 @@
       {{apply.phone}}
     </view>
   </view>
-
-
-  
-
-
   <block wx:if="{{apply.type==1}}">
     <view class="cu-item">
       <view class="content">
@@ -112,6 +107,10 @@
         {{apply.area}}
       </view>
     </view>
+    <view class="cu-form-group align-start solid-bottom">
+      <text class="title" space="emsp">经 历</text>
+      <view class="textarea">{{apply.through}}</view>
+    </view>
   </block>
   <view class="cu-item" wx:else>
     <view class="content">
@@ -120,12 +119,7 @@
     <view class="action">
       {{apply.title}}
     </view>
-  </view>
-
-  <view class="cu-form-group align-start solid-bottom">
-    <text class="title" space="emsp">经 历</text>
-    <view class="textarea">{{apply.through}}</view>
-  </view>
+  </view>  
   <view class="cu-item">
     <view class="content">
       注册状态

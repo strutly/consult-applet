@@ -3,7 +3,7 @@ import Api from "../../config/api";
 Page({
   data: {
     index: 1,
-    types: ['请选择问题类型', '普通咨询', '付费咨询'],
+    types: ['未选择','视频会议','线下交流'],
     status:[{type:0,title:"待处理"},
     {type:1,title:"预约成功"},
     {type:2,title:"预约失效"},

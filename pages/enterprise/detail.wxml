@@ -221,4 +221,8 @@
       </view>
     </view>
   </view>
+  <view class="padding flex flex-direction bg-white">
+    
+    <navigator hover-class="none" url="/pages/enterprise/form?id={{enterprise.id}}" class="cu-btn bg-cyan lg">编辑</navigator>
+  </view>
 </view>

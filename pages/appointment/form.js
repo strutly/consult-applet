@@ -3,7 +3,7 @@ import Api from "../../config/api";
 import WxValidate from "../../utils/WxValidate";
 Page({
   data: {
-    types:['请选择问题类型','普通咨询','付费咨询'],
+    types:['请选择问题类型','视频会议','线下交流'],    
     formData:{
       type:0
     },
@@ -18,6 +18,9 @@ Page({
   },
   initValidate() {
     const rules = {
+      toid:{
+        required: true
+      },
       type: {
         required: true,
         min: 1
@@ -33,6 +36,9 @@ Page({
       }
     };
     const messages = {
+      toid:{
+        required: '参数错误,请重新进入'
+      },
       type: {
         required: '请选择问题类型',
         min: '请选择问题类型'
@@ -65,16 +71,14 @@ Page({
   },
   async submit(e) {
     console.log(e);
-    if (!that.WxValidate.checkForm(e.detail.value)) {
+    let data = e.detail.value;
+    if (!that.WxValidate.checkForm(data)) {
       console.log(that.WxValidate)
       let error = that.WxValidate.errorList[0]
       that.showTips(error.msg)
       return false;
-    }
-    let data = e.detail.value;
-    data.toUser = {id:that.data.toid};
+    }    
     let res = await Api.addAppointment(data);
-    
     console.log(res);
     if (res.code == 0) {
       that.showTips("提交成功,请耐心等待审核", "success");

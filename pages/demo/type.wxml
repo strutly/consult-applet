@@ -1,0 +1,15 @@
+<view class="container margin-top-xl align-center">
+  <view class="padding-xl margin-top-xl"></view>
+  <navigator hover-class="none" url="/pages/demo/enterpriseReg" class="flex margin padding align-center">
+    <image class="type-icon" src="/images/enterprise0.png"></image>
+    <view class="solids round flex-sub padding padding-tb-xl text-center text-lg margin-lr">投资机构或企业</view>
+  </navigator>
+  <navigator hover-class="none" url="/pages/demo/expertReg" class="flex margin padding align-center">
+    <image class="type-icon" src="/images/expert0.png"></image>
+    <view class="solids round flex-sub padding padding-tb-xl text-center text-lg margin-lr">专家</view>
+  </navigator>
+  <navigator hover-class="none" url="/pages/demo/expertReg" class="flex margin padding align-center">
+    <image class="type-icon" src="/images/user0.png"></image>
+    <view class="solids round flex-sub padding padding-tb-xl text-center text-lg margin-lr">游客(个人)</view>
+  </navigator>
+</view>

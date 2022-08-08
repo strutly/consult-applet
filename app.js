@@ -9,7 +9,7 @@ App({
         if (res.code == 0) {
           that.globalData.mold = res.data.mold;
         }
-      }, 1000);
+      }, 100);
     });
   },
   globalData: {
@@ -18,9 +18,7 @@ App({
   },
   watch(method) {
     var obj = this.globalData;
-    console.log(obj)    
     if (obj.login) {
-      console.log(obj)
       method(obj.mold);
     }else{
       Object.defineProperty(obj, 'mold', {
